@@ -17,12 +17,6 @@ public class TradesJob {
     }
 
     public void run(String host, int port, String login, String password) {
-        Map<String, String> attributes = new HashMap<String, String>();
-        attributes.put("host", host);
-        attributes.put("port", Integer.toString(port));
-        attributes.put("login", login);
-        attributes.put("password", password);
-
         Attribute attribute = new Attribute("localhost", 8888, "user", "123");
         FileLoader loader = new FTPFileLoader(attribute);
         String filename = loader.downloadFile();
