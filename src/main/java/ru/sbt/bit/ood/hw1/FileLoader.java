@@ -12,5 +12,6 @@ public abstract class FileLoader {
     public FileLoader(Attribute attribute) {
         this.attribute = attribute;
     }
+
     abstract String downloadFile();
 }
