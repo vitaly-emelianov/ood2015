@@ -1,17 +1,18 @@
 package ru.sbt.bit.ood.hw1;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by vitaly on 10/13/16.
  */
-public abstract class FileLoader {
+public abstract class Downloader {
 
     protected final Attribute attribute;
 
-    public FileLoader(Attribute attribute) {
+    public Downloader(Attribute attribute) {
         this.attribute = attribute;
     }
 
-    abstract String downloadFile();
+    public abstract String downloadFile();
 }
