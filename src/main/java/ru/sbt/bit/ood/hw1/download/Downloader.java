@@ -1,7 +1,6 @@
-package ru.sbt.bit.ood.hw1;
+package ru.sbt.bit.ood.hw1.download;
 
-import java.util.List;
-import java.util.Map;
+import ru.sbt.bit.ood.hw1.attribute.Attribute;
 
 /**
  * Created by vitaly on 10/13/16.
@@ -14,5 +13,5 @@ public abstract class Downloader {
         this.attribute = attribute;
     }
 
-    public abstract String downloadFile();
+    public abstract String downloadFile(String filename);
 }

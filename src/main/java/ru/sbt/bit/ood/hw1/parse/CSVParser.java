@@ -1,7 +1,8 @@
-package ru.sbt.bit.ood.hw1;
+package ru.sbt.bit.ood.hw1.parse;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import ru.sbt.bit.ood.hw1.Trade;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class CSVParser implements Parser {
             Reader in = new FileReader(filename);
             Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(in);
             List<Trade> trades = new ArrayList();
-            for (CSVRecord record: records) {
+            for (CSVRecord record : records) {
                 Map<String, String> tradeFieldValues = record.toMap();
                 trades.add(new Trade(tradeFieldValues));
             }

@@ -1,4 +1,6 @@
-package ru.sbt.bit.ood.hw1;
+package ru.sbt.bit.ood.hw1.attribute;
+
+import org.w3c.dom.Attr;
 
 /**
  * Created by vitaly on 10/13/16.

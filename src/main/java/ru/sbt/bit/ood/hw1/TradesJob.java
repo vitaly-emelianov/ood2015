@@ -1,5 +1,8 @@
 package ru.sbt.bit.ood.hw1;
 
+import ru.sbt.bit.ood.hw1.download.Downloader;
+import ru.sbt.bit.ood.hw1.parse.Parser;
+
 import java.util.List;
 
 public class TradesJob {
@@ -10,9 +13,9 @@ public class TradesJob {
         this.tradesDAO = tradesDAO;
     }
 
-    public void run(Downloader downloader, TradesDAO tradesDAO, Parser parser) {
-        String filename = downloader.downloadFile();
-        List<Trade> trades = parser.parse(filename);
+    public void run(String filename, Downloader downloader, TradesDAO tradesDAO, Parser parser) {
+        String file = downloader.downloadFile(filename);
+        List<Trade> trades = parser.parse(file);
         tradesDAO.updateTrades(trades);
     }
 }

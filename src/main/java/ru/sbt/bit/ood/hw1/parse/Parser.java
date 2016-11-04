@@ -1,4 +1,6 @@
-package ru.sbt.bit.ood.hw1;
+package ru.sbt.bit.ood.hw1.parse;
+
+import ru.sbt.bit.ood.hw1.Trade;
 
 import java.util.List;
 
