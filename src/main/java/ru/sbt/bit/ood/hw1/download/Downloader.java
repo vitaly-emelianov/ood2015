@@ -7,7 +7,9 @@ import ru.sbt.bit.ood.hw1.attribute.Attribute;
  */
 public abstract class Downloader {
 
-    protected final Attribute attribute;
+    protected Attribute attribute;
+
+    public Downloader() {}
 
     public Downloader(Attribute attribute) {
         this.attribute = attribute;
